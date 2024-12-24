@@ -13,7 +13,7 @@ export interface ButtonProps
 
 const Button = ({ variant, ...props }: ButtonProps) => {
   const className = classNames({
-    "px-4 py-2 rounded font-bold transition duration-200 text-center": true,
+    "px-4 py-2 rounded transition duration-200 text-center": true,
     "bg-primary text-white hover:opacity-70": variant === "contained",
     "border border-primary text-primary bg-white hover:bg-primary hover:text-white":
       variant === "outlined",

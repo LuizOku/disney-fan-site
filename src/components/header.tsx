@@ -4,13 +4,12 @@ import React, { useState } from "react";
 import Image from "next/image";
 import Input from "./input";
 import { debounce } from "@/utils/debounce";
-import { useSearchParams, usePathname, useRouter } from "next/navigation";
+import { useSearchParams, useRouter } from "next/navigation";
 import Link from "next/link";
 
 const Header = () => {
   const searchParams = useSearchParams();
   const [search, setSearch] = useState(searchParams?.get("name") || "");
-  const pathname = usePathname();
   const router = useRouter();
 
   const updateQueryParam = debounce((value: string) => {
@@ -22,7 +21,7 @@ const Header = () => {
     }
     params.set("page", "1");
 
-    router.push(`${pathname}?${params.toString()}`);
+    router.push(`/?${params.toString()}`);
   }, 300);
 
   const handleInputChange = (e: React.ChangeEvent<HTMLInputElement>) => {

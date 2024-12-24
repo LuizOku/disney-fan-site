@@ -1,6 +1,6 @@
 import { Character } from "../shared/character";
 
-interface DisneyApiResponse {
+interface AllCharactersApiResponse {
   info: {
     totalPages: number;
     count: number;
@@ -16,7 +16,7 @@ const getAllCharacters = async ({
 }: {
   page: string;
   name: string;
-}): Promise<DisneyApiResponse> => {
+}): Promise<AllCharactersApiResponse> => {
   const headers: HeadersInit = {
     "Content-Type": "application/json",
   };

@@ -1,5 +1,5 @@
 import Card from "@/components/card";
-import getAllCharacters from "./services/get-all-characters";
+import getAllCharacters from "../services/get-all-characters";
 import Header from "@/components/header";
 import PageControl from "@/components/page-control";
 

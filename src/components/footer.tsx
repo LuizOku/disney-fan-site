@@ -1,6 +1,6 @@
 import React from "react";
 import Image from "next/image";
-import getAllCharacters from "@/app/services/get-all-characters";
+import getAllCharacters from "@/services/get-all-characters";
 import Card from "./card";
 
 const Footer = async () => {

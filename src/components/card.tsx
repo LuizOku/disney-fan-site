@@ -24,12 +24,16 @@ const Card = ({ title, image, featuredFilms, id }: CardProps) => {
         <div className="font-bold text-xl mb-2 text-black text-center">
           {title}
         </div>
-        <span className="text-black font-bold text-base mt-3">
-          Featured Films:
-        </span>
-        <p className="text-black text-center text-base">
-          {truncateText(featuredFilms.join(", "), 50)}
-        </p>
+        {featuredFilms.length > 0 && (
+          <>
+            <span className="text-black font-bold text-base mt-3">
+              Featured Films:
+            </span>
+            <p className="text-black text-center text-base">
+              {truncateText(featuredFilms.join(", "), 50)}
+            </p>
+          </>
+        )}
         <Link
           href={`/character/${id}`}
           className="text-black font-bold text-sm text-center underline mt-auto mb-0"
