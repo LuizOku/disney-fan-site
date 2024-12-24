@@ -8,13 +8,13 @@ export interface InputProps
     >,
     React.AriaAttributes {}
 
-const Input = (props: InputProps) => {
+const Search = (props: InputProps) => {
   const mergedClassNames = twMerge(
-    "rounded bg-white h-8 px-3 border",
+    "rounded-full bg-gray h-10 px-3",
     props.className
   );
 
   return <input {...props} className={mergedClassNames}></input>;
 };
 
-export default Input;
+export default Search;

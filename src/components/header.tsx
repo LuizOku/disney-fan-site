@@ -2,7 +2,7 @@
 
 import React, { useState } from "react";
 import Image from "next/image";
-import Input from "./input";
+import Search from "./search";
 import { debounce } from "@/utils/debounce";
 import { useSearchParams, useRouter } from "next/navigation";
 import Link from "next/link";
@@ -35,7 +35,7 @@ const Header = () => {
       <Link href="/">
         <Image src="/logo.png" alt="Disney" width={100} height={50} />
       </Link>
-      <Input
+      <Search
         type="text"
         placeholder="Find a character..."
         className="flex-1"
