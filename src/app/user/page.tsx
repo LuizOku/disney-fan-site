@@ -123,16 +123,17 @@ export default function User() {
             </p>
             <p className="text-base font-semibold mt-2">
               Location:{" "}
-              {user.city && user.state
+              {user?.city && user?.state
                 ? `${user.city}, ${user.state}`
                 : "Not set"}
             </p>
             <p className="text-base font-semibold mt-2">
               Favorite Character:{" "}
-              {user.favoriteCharacter ? user.favoriteCharacter : "Not set"}
+              {user?.favoriteCharacter ? user.favoriteCharacter : "Not set"}
             </p>
             <p className="text-base font-semibold mt-2">
-              Favorite Ride: {user.favoriteRide ? user.favoriteRide : "Not set"}
+              Favorite Ride:{" "}
+              {user?.favoriteRide ? user.favoriteRide : "Not set"}
             </p>
             <p className="text-base font-semibold mt-2">
               Favorite Movie:{" "}
@@ -140,7 +141,7 @@ export default function User() {
             </p>
             <p className="text-base font-semibold mt-2">
               Favorite Disney Theme Park:{" "}
-              {user.favoriteDisneyland ? user.favoriteDisneyland : "Not set"}
+              {user?.favoriteDisneyland ? user.favoriteDisneyland : "Not set"}
             </p>
             <div className="mt-8">
               <Button variant="contained" onClick={() => setIsEditing(true)}>
